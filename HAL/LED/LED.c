@@ -1,3 +1,7 @@
+/*
+NAMED:Ahmed Mohamed Elsayed
+ID: 2200621
+*/
 #include "../../LIB/TM4C123GH6PM.h"
 #include "../../MCAL/GPIO/GPIO.h"
 #include "LED.h"
@@ -5,9 +9,9 @@
 void LED_LedInit(void)
 {
   GPIO_Init(GPIO_PORTF);
-	//GPIO_Pin_Init(GPIO_PORTF,LED_RED_PIN);
-	//GPIO_Pin_Init(GPIO_PORTF,LED_BLUE_PIN);
-	//GPIO_Pin_Init(GPIO_PORTF,LED_GREEN_PIN);
+	GPIO_Pin_Init(GPIO_PORTF,LED_RED_PIN);
+	GPIO_Pin_Init(GPIO_PORTF,LED_BLUE_PIN);
+	GPIO_Pin_Init(GPIO_PORTF,LED_GREEN_PIN);
 	set_Pin_Direction(GPIO_PORTF, LED_BLUE_PIN, GPIO_OUTPUT);   /**< then initialize the LED direction */
 	set_Pin_Direction(GPIO_PORTF, LED_GREEN_PIN, GPIO_OUTPUT);  /**< then initialize the LED direction */  
 	set_Pin_Direction(GPIO_PORTF, LED_RED_PIN, GPIO_OUTPUT);    /**< then initialize the LED direction */
